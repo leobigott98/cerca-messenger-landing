@@ -127,12 +127,12 @@ export default async function HomePage() {
             <StepCard
               number="2"
               title="Agrega contactos por QR"
-              text="Cada usuario debe mostrar su QR desde la app. La otra persona lo escanea para agregarlo como contacto."
+              text="Cada usuario debe mostrar su QR desde la app. La otra persona lo escanea para agregarlo como contacto. IMPORTANTE: ambos teléfonos deben escanear el QR del otro para que puedan enviarse mensajes."
             />
             <StepCard
               number="3"
-              title="Verifica el contacto"
-              text="Después de escanear el QR, confirma que el nombre o identificador corresponde a la persona correcta."
+              title="Guarda el contacto"
+              text="Después de escanear el QR, agrega un nombre o identificador que corresponda a la persona correcta."
             />
             <StepCard
               number="4"
@@ -146,11 +146,30 @@ export default async function HomePage() {
               Importante sobre los QR
             </h3>
             <p className="mt-2 text-slate-300">
+              Ambos contactos deben escanear el QR del otro para que puedan enviarse mensajes.
               El QR es la forma recomendada de agregar contactos porque permite
               intercambiar la información pública necesaria para identificar al
               destinatario y preparar el envío seguro de mensajes. No compartas
               capturas de QR en lugares públicos si no quieres que desconocidos
               intenten agregarte.
+            </p>
+          </div>
+
+          <div className="mt-5 rounded-3xl border border-cyan-300/20 bg-cyan-300/10 p-5">
+            <h3 className="font-bold text-cyan-100">
+              Sección de Crisis
+            </h3>
+            <p className="mt-2 text-slate-300">
+              La app incluye una sección de crisis que permite enviar mensajes a cualquier nodo, sin necesidad de agregar por QR. Estos mensajes actúan como broadcast y se envían a todos los nodos cercanos. Úsala solo en situaciones de emergencia o cuando sea necesario difundir información crítica.
+            </p>
+          </div>
+
+          <div className="mt-5 rounded-3xl border border-cyan-300/20 bg-cyan-300/10 p-5">
+            <h3 className="font-bold text-cyan-100">
+              Configuración de la app
+            </h3>
+            <p className="mt-2 text-slate-300">
+              La app permite configurar el tiempo de espera para descubrimiento de nodos. El valor predeterminado es de 30 segundos, pero puedes ajustarlo según tus necesidades. Un tiempo más corto puede aumentar la probabilidad de encontrar otros dispositivos, mientras que un tiempo más largo puede ahorrar batería.
             </p>
           </div>
         </ContentSection>
@@ -324,8 +343,8 @@ export default async function HomePage() {
 
         <ContentSection title="Créditos">
           <p>
-            Proyecto desarrollado por <strong>Leonardo Andrés Bigott</strong>{" "}
-            como parte de su trabajo de investigación en Ingeniería de Sistemas.
+            Proyecto desarrollado por estudiante de la Universidad Metropolitana (UNIMET) en Caracas, Venezuela,
+            como parte de su trabajo de investigación en Ingeniería de Sistemas. Para más información, contáctenos a través del formulario de sugerencias al final de la página.
           </p>
 
           <p>
