@@ -43,7 +43,7 @@ export function FeedbackForm() {
       <input
         value={name}
         onChange={(event) => setName(event.target.value)}
-        placeholder="Tu nombre, opcional"
+        placeholder="Tu nombre o correo, opcional"
         maxLength={80}
         className="rounded-2xl border border-white/10 bg-white/10 px-4 py-3 text-white placeholder:text-slate-400 outline-none focus:border-cyan-300"
       />
