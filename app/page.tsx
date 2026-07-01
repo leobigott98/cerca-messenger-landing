@@ -117,7 +117,7 @@ export default async function HomePage() {
           </p>
 
           <p>
-            La aplicación está basada en el <strong>Context and Energy-aware Routing for Crisis Ad hoc messaging Protocol</strong> o <strong>Protocolo CERCA</strong>, un protocolo de enrutamiento oportunista diseñado para redes ad hoc en situaciones de crisis. CERCA permite que los mensajes se transmitan de manera eficiente y confiable a través de múltiples saltos (hops) entre nodos, optimizando el uso de energía y el contexto de la red.
+            La aplicación está basada en el <strong>Context and Energy-aware Routing for Crisis Ad hoc messaging Protocol</strong> o <strong>Protocolo CERCA</strong>, un protocolo de enrutamiento oportunista diseñado por estudiantes de la UNIMET para redes ad hoc en situaciones de crisis. CERCA permite que los mensajes se transmitan de manera eficiente y confiable a través de múltiples saltos (hops) entre nodos, optimizando el uso de energía y el contexto de la red.
           </p>
         </ContentSection>
 
