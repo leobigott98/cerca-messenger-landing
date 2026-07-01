@@ -115,6 +115,10 @@ export default async function HomePage() {
             baja cobertura, eventos masivos, comunidades aisladas o fallas de
             infraestructura.
           </p>
+
+          <p>
+            La aplicación está basada en el <strong>Context and Energy-aware Routing for Crisis Ad hoc messaging Protocol</strong> o <strong>Protocolo CERCA</strong>, un protocolo de enrutamiento oportunista diseñado para redes ad hoc en situaciones de crisis. CERCA permite que los mensajes se transmitan de manera eficiente y confiable a través de múltiples saltos (hops) entre nodos, optimizando el uso de energía y el contexto de la red.
+          </p>
         </ContentSection>
 
         <ContentSection id="empezar" title="Cómo empezar a enviar mensajes">
@@ -146,7 +150,7 @@ export default async function HomePage() {
               Importante sobre los QR
             </h3>
             <p className="mt-2 text-slate-300">
-              Ambos contactos deben escanear el QR del otro para que puedan enviarse mensajes.
+              <strong> Ambos contactos deben escanear el QR del otro para que puedan enviarse mensajes. </strong>
               El QR es la forma recomendada de agregar contactos porque permite
               intercambiar la información pública necesaria para identificar al
               destinatario y preparar el envío seguro de mensajes. No compartas
