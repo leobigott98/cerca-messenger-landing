@@ -1,6 +1,9 @@
 import { NextResponse } from "next/server";
 import { supabaseAdmin } from "@/lib/supabase";
 
+export const dynamic = "force-dynamic";
+export const revalidate = 0;
+
 export async function GET() {
   const apkUrl = process.env.APK_DOWNLOAD_URL;
 
@@ -11,21 +14,19 @@ export async function GET() {
     );
   }
 
-  const { data, error } = await supabaseAdmin
-    .from("app_metrics")
-    .select("downloads")
-    .eq("id", "cerca-apk")
-    .single();
+  const { error } = await supabaseAdmin.rpc("increment_download_count", {
+    metric_id: "cerca-apk",
+  });
 
-  if (!error && data) {
-    await supabaseAdmin
-      .from("app_metrics")
-      .update({
-        downloads: data.downloads + 1,
-        updated_at: new Date().toISOString(),
-      })
-      .eq("id", "cerca-apk");
+  if (error) {
+    console.error("Download counter error:", error);
   }
 
-  return NextResponse.redirect(apkUrl);
+  const response = NextResponse.redirect(apkUrl, 302);
+
+  response.headers.set("Cache-Control", "no-store, no-cache, must-revalidate");
+  response.headers.set("Pragma", "no-cache");
+  response.headers.set("Expires", "0");
+
+  return response;
 }
