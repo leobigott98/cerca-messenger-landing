@@ -173,7 +173,7 @@ export default async function HomePage() {
               Configuración de la app
             </h3>
             <p className="mt-2 text-slate-300">
-              La app permite configurar el tiempo de espera para descubrimiento de nodos. El valor predeterminado es de 30 segundos, pero puedes ajustarlo según tus necesidades. Un tiempo más corto puede aumentar la probabilidad de encontrar otros dispositivos, mientras que un tiempo más largo puede ahorrar batería.
+              La app permite configurar el tiempo de espera para descubrimiento de nodos. El valor predeterminado es de <strong>5 segundos,</strong> pero puedes ajustarlo según tus necesidades. Un tiempo más corto puede aumentar la probabilidad de encontrar otros dispositivos, mientras que un tiempo más largo puede ahorrar batería.
             </p>
           </div>
         </ContentSection>
@@ -366,6 +366,18 @@ export default async function HomePage() {
 
         <ContentSection title="Historial de cambios">
           <div className="space-y-4">
+            <VersionItem
+              version="v0.4.0"
+              date="Julio 2026"
+              items={[
+                "Sincronización con la nube",
+                "Mensajes tipo broadcast para situaciones de emergencia",
+                "Traducción a varios idiomas",
+                "Mejoras en la interfaz de usuario y experiencia de usuario",
+              ]}
+            />
+
+
             <VersionItem
               version="v0.3.0"
               date="Julio 2026"
