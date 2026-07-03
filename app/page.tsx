@@ -32,7 +32,7 @@ async function getDownloadCount() {
 export default async function HomePage() {
   const downloads = await getDownloadCount();
 
-  const apkVersion = process.env.APK_VERSION || "0.3.0";
+  const apkVersion = process.env.APK_VERSION || "0.4.1";
   const releaseDate = process.env.APK_RELEASE_DATE || "Julio 2026";
   const apkSha256 = process.env.APK_SHA256 || "Pendiente de publicar";
 
@@ -367,6 +367,17 @@ export default async function HomePage() {
         <ContentSection title="Historial de cambios">
           <div className="space-y-4">
             <VersionItem
+              version="v0.4.1"
+              date="Julio 2026"
+              items={[
+                "Corrección de bugs en sincronización con la nube",
+                "Corrección de bugs en distribución de ACKs",
+                "Corrección de bugs en número de copias",
+                "Corrección de bugs en descubrimiento de nodos y reenvío"
+              ]}
+            />
+
+            <VersionItem
               version="v0.4.0"
               date="Julio 2026"
               items={[
@@ -380,7 +391,7 @@ export default async function HomePage() {
 
             <VersionItem
               version="v0.3.0"
-              date="Julio 2026"
+              date="Junio 2026"
               items={[
                 "Agregado de contactos mediante códigos QR.",
                 "Mejoras en descubrimiento y conexión con dispositivos cercanos.",
