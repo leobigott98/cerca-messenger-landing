@@ -57,12 +57,12 @@ export default async function HomePage() {
               </p>
 
               <div className="mt-6 flex flex-col gap-3 sm:flex-row">
-                <a
-                  href="/api/download"
+                <div
+                  //href="/api/download"
                   className="rounded-2xl bg-cyan-400 px-5 py-4 text-center font-black text-slate-950 transition hover:bg-cyan-300"
                 >
-                  Descargar APK v{apkVersion}
-                </a>
+                  Trabajando en v0.4.2... <span className="font-normal">(APK disponible pronto)</span>
+                </div>
 
                 <a
                   href="#empezar"
