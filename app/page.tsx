@@ -32,7 +32,7 @@ async function getDownloadCount() {
 export default async function HomePage() {
   const downloads = await getDownloadCount();
 
-  const apkVersion = process.env.APK_VERSION || "0.4.1";
+  const apkVersion = process.env.APK_VERSION || "0.4.2";
   const releaseDate = process.env.APK_RELEASE_DATE || "Julio 2026";
   const apkSha256 = process.env.APK_SHA256 || "Pendiente de publicar";
 
@@ -57,12 +57,12 @@ export default async function HomePage() {
               </p>
 
               <div className="mt-6 flex flex-col gap-3 sm:flex-row">
-                <div
-                  //href="/api/download"
+                <a
+                  href="/api/download"
                   className="rounded-2xl bg-cyan-400 px-5 py-4 text-center font-black text-slate-950 transition hover:bg-cyan-300"
                 >
-                  Trabajando en v0.4.2... <span className="font-normal">(APK disponible pronto)</span>
-                </div>
+                  Descargar APK v{apkVersion}
+                  </a>
 
                 <a
                   href="#empezar"
@@ -366,6 +366,14 @@ export default async function HomePage() {
 
         <ContentSection title="Historial de cambios">
           <div className="space-y-4">
+            <VersionItem
+              version="v0.4.2"
+              date="Julio 2026"
+              items={[
+                "Corrección de bugs en sincronización con la nube",
+              ]}
+            />
+
             <VersionItem
               version="v0.4.1"
               date="Julio 2026"
